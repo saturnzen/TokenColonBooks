@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Bootscamp</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <!-- Option 1: Include in HTML -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- bắt đầu phần Navbar -->
+    <!-- navbar-expand-lg có thể thay bằng navbar-expand-sm 
+    khác nhau là độ co kéo khi đạt tới mức độ nhất định 
+  tức là ở những kích cỡ màn hình khác nhau sẽ ẩn phần navbar-->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top">
+      <!-- Container với div tạo căn lề trên navbar -->
+      <div class="container">
+        <!-- Các class cho navbar đều bắt đầu với navbar hoặc nav 
+        đi sau là dạng triển khai -->
+        <a href="#" class="navbar-brand"
+          >Learning to Read, then Reading to Learn</a
+        >
+        <!-- tạo một button dạng hambuger, nút này sẽ gói các phần tử
+        trong nav lại khi kích cỡ màn hình dưới mức đã cài đặt -->
+        <!-- data-bs-toggle để chỉ dạng hiển thị khi đã chuyển về nút menu
+        cụ thể ở đây sẽ showlist của nav -->
+        <!-- data-bs-target dùng chỉ định #navmenu 
+          dùng để áp dụng class navbar-toogle cho các cấu phần
+        trong div collapse phía dưới -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <!-- navbar-toggler-icon là icon hambuger -->
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navmenu">
+          <!-- navbar-nav và nav-item, nav-link như những cái hộp định sẵn
+          để chứa các phần tử với margin và padding cố định -->
+          <!-- ms-auto dùng đẩy menu sang bên phải -->
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#learn" class="nav-link">What You'll learn</a>
+            </li>
+            <li class="nav-item">
+              <a href="#read" class="nav-link">LambdaInformationColonData</a>
+            </li>
+            <li class="nav-item">
+              <a href="#learn" class="nav-link">TokenColonBooks</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- Kết thúc phần nav-bar -->
+
+    <!-- bắt đầu phần showcase -->
+    <!-- bg-dark: màu nền màu đen
+          text-light: chữ màu trắng
+          p-5: padding tất cả các hướng, có thể dùng pt cho padding top, pb là padding bottom
+        px là padding theo trục hoành, số phía sau là khoảng cách (chưa biết theo đơn vị gì)
+          thêm p-lg-0 sẽ bỏ padding ở màn hình lớn (khoảng cách giữa hình ảnh với dưới cùng)
+          pt-lg-5: tạo khoảng cách giữa đầu cô gái với thanh điều hướng (navbar)
+        -->
+    <!-- THấy rõ rệt sự khác biệt của container khi thay đổi pb pt hay px py -->
+    <!-- text-center căn chữ ở giữa, 
+      text-sm-start giúp đưa chữ về bên trái ở các màn hình lớn -->
+    <section
+      class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
+    >
+      <div class="container">
+        <!-- https://getbootstrap.com/docs/5.3/utilities/flex/#enable-flex-behaviors -->
+        <!-- d-flex sắp xếp các phần bên cạnh nhau theo hàng ngang 
+        d-sm-flex sẽ set để d-flex chỉ áp dụng cho màn hình lớn hơn cỡ sm-->
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h1>Become a <span class="text-warning"> Web Devoloper</span></h1>
+            <!-- lead đẩy kích thước của text lên
+            my-4 dùng tạo một ít margin theo hướng dọc (trục tung) -->
+            <p class="lead my-4">
+              Theo chân 2 nhà kinh tế học, tên fanpage đặt theo một trong những
+              ý tưởng được đề xuất trong cuốn sách "Hiểu nghèo, thoát nghèo"
+            </p>
+            <p>
+              Sử dụng các giới hạn như sketch-note, haiku, twitter140... để
+              truyền tải.
+            </p>
+            <button
+              class="btn btn-primary btn-lg"
+              data-bs-toggle="modal"
+              data-bs-target="#enroll"
+            >
+              Start the Enrollment
+            </button>
+          </div>
+          <!-- img-fluid để đẩy hình ảnh nằm trong container 
+          w-50 để size hình ảnh còn 50%
+        d-none để ẩn ảnh đi
+      d-sm-block để chỉ ẩn ảnh trên màn hình nhỏ-->
+          <img
+            class="img-fluid w-50 d-none d-sm-block"
+            src="img/undraw_conference_re_2yld.svg"
+            alt=""
+            srcset=""
+          />
+        </div>
+      </div>
+    </section>
+    <!-- kết thúc phần showcase -->
+
+    <!-- bắt đầu phần Newsletter -->
+    <section class="bg-primary text-light p-5">
+      <div class="container">
+        <div class="d-md-flex justify-content-between align-items-center">
+          <h3 class="mb-3 mb-md-0">Sign up for Our Newsletter</h3>
+
+          <!-- https://getbootstrap.com/docs/5.3/forms/input-group/ -->
+          <div class="input-group news-input">
+            <input type="text" class="form-control" placeholder="Enter Email" />
+            <button
+              class="btn btn-dark btn-lg"
+              type="button"
+              id="button-addon2"
+            >
+              Button
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- kết thúc phần newsletter -->
+
+    <!-- Bắt đầu phần boxes -->
+    <section class="p-5">
+      <div class="container">
+        <!-- g-4 để tạo khoảng cách giữa các cột hoặc hàng -->
+        <div class="row text-center g-4">
+          <div class="col-md">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <!-- sử dụng class h1 trong bootstrap mô phỏng các phẩn tử dạng h1
+                tức là làm nó lớn lên -->
+                <div class="h1 mb-3">
+                  <i class="bi bi-laptop"></i>
+                </div>
+                <h3 class="card-title mb-3">Vomit Science Time</h3>
+                <p class="card-text">
+                  Có những khoảnh khắc mà những thứ trong đầu bạn kết nối với
+                  nhau theo kiểu "à rất có thể đấy". Khi bạn vẽ tất cả ra và kết
+                  nối chúng với nhau, như sau khi bạn nghĩ nói ra sẽ dễ chịu
+                  hơn, nhưng thực ra cảm giác nôn nao khác sẽ thay thế cái nôn
+                  nao này. Điều này đại khái cũng giống vậy.
+                </p>
+                <a
+                  href="https://www.facebook.com/media/set/?set=a.208204035060785&type=3"
+                  class="btn btn-primary"
+                  >Read more</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-secondary text-light">
+              <div class="card-body text-center">
+                <!-- sử dụng class h1 trong bootstrap mô phỏng các phẩn tử dạng h1
+              tức là làm nó lớn lên -->
+                <div class="h1 mb-3">
+                  <i class="bi bi-people"></i>
+                </div>
+                <h3 class="card-title mb-3">Past Event</h3>
+                <p class="card-text">
+                  CÓ những thứ đúng thời điểm phải xảy ra. Mọi thứ bỗng dưng kết
+                  nối với nhau theo một chủ để, còn chúng tôi thì muốn chuyển
+                  thể nó sang dạng haiku. Đúng với tiêu chí "đọc để học", ngay
+                  khi thấy điều này có vẻ thú vị để truyền tải. Chúng tôi làm
+                  một loạt sự kiện với các nội dung theo cách này.
+                </p>
+                <a
+                  href="https://www.facebook.com/TokenColonBooks/events"
+                  class="btn btn-dark"
+                  >Read more</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <!-- sử dụng class h1 trong bootstrap mô phỏng các phẩn tử dạng h1
+              tức là làm nó lớn lên -->
+                <div class="h1 mb-3">
+                  <i class="bi bi-person-square"></i>
+                </div>
+                <h3 class="card-title mb-3">Hybrid</h3>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kết thúc phần Boxes -->
+    <!-- Bắt đầu phần Learn -->
+    <section id="learn" class="p-5">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md">
+            <img
+              src="img/undraw_road_to_knowledge_m8s0.svg"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+          <div class="col-md p-5">
+            <h2>Learning to Read</h2>
+            <p class="lead">
+              [NS50, NS07] với tiền đề của thặng dư và kế thừa, người ta sẽ sử
+              dụng lợi nhuận như thế nào? Ví dụ, sự kết hợp của đường truyền
+              nhanh hơn và dễ tiếp cận những nội dung tương tự hơn, bạn dư dả
+              thời gian (do không phải tìm kiếm hay chờ đợi) và bạn dùng thời
+              gian này để xem nhiều thứ được gợi ý hơn. Quay lại với ý tưởng
+              trước đó, cuộc nói chuyện được đám mây hoá, sau đó phân loại và
+              xếp hạng, liệu có đẩy nhanh hay giúp ích cho cộng hưởng thông qua
+              định tính hoá và định lượng hoá dễ dàng hơn?
+            </p>
+            <p>
+              Thế giới trở nên quá phức tạp và rộng lớn để bạn không phải một
+              phần của thuyết âm mưu nào đó. Với *Decision Hygiene*, bạn sẽ tự
+              hỏi, đứng trên sân thượng, chân chạm đất thì có thuộc toà nhà hay
+              không?
+            </p>
+            <a
+              href="https://www.facebook.com/photo?fbid=306843528530168&set=a.178604204687435"
+              class="btn btn-light mt-3"
+            >
+              <i class="bi bi-chevron-right">Read more</i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="read" class="p-5 bg-dark text-light">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md p-5">
+            <h2>Reading to Learn</h2>
+            <p class="lead">
+              Ban nghĩ gì khi đọc xong một cuốn sách? Có khi nào bạn cảm thấy
+              muốn chia sẻ cái sự hay ho mới đọc được này? Nhưng lại chẳng biết
+              phải nói với ai? Liệu răng nó có quá cũ kỹ? Hay liệu nó quá giáo
+              điều nên không bao giờ được áp dụng? Một tác giả khác có thể đã
+              bàn về chủ đề này. Tác giả này đã nghĩ thế này khi đọc cái này.
+              Tác giả kia có suy nghĩ giống giống nhưng có một số thứ hay ho khi
+              đọc thứ này thứ kia. Đó là cách các bài viết kết nối các cuốn sách
+              ở đây.
+            </p>
+            <p>
+              Tất nhiên, có những ý kiến thực sự lỗi thời hay cần cập nhập. "Nếu
+              bạn không bỏ đi một thứ mình từng tâm đắc trong năm nay, thì bạn
+              chưa tiến bộ" _Charlie Munger. Kiểm chứng các ý tưởng được chúng
+              tôi lan truyền là ý tưởng chính hiện tại.
+            </p>
+            <a
+              href="https://saturnzen.github.io/LambdaInformationColonData
+            "
+              class="btn btn-light mt-3"
+            >
+              <i class="bi bi-chevron-right">Read more</i>
+            </a>
+          </div>
+          <div class="col-md">
+            <img
+              src="img/undraw_reading_time_re_phf7.svg"
+              class="img-fluid"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUestion ACcordion -->
+    <section id="questions" class="p-5">
+      <div class="container">
+        <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+
+        <div class="accordion accordion-flush" id="questions">
+          <!-- Item 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-one"
+              >
+                Where exactly are you located?
+              </button>
+            </h2>
+            <div
+              id="question-one"
+              class="accordion-collapse collapse"
+              data-bs-parent="questions"
+            >
+              <div class="accordion-body">
+                Placeholder content for this accordion, which is intended to
+                demonstrate the <code>.accordion-flush</code> class. This is the
+                first item's accordion body.
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-two"
+              >
+                How much does it cost to attend?
+              </button>
+            </h2>
+            <div
+              id="question-two"
+              class="accordion-collapse collapse"
+              data-bs-parent="questions"
+            >
+              <div class="accordion-body">
+                Placeholder content for this accordion, which is intended to
+                demonstrate the <code>.accordion-flush</code> class. This is the
+                first item's accordion body.
+              </div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-three"
+              >
+                What do I need to know?
+              </button>
+            </h2>
+            <div
+              id="question-three"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Placeholder content for this accordion, which is intended to
+                demonstrate the <code>.accordion-flush</code> class. This is the
+                third item's accordion body. Nothing more exciting happening
+                here in terms of content, but just filling up the space to make
+                it look, at least at first glance, a bit more representative of
+                how this would look in a real-world application.
+              </div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-four"
+              >
+                How do I sign up?
+              </button>
+            </h2>
+            <div
+              id="question-four"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Placeholder content for this accordion, which is intended to
+                demonstrate the <code>.accordion-flush</code> class. This is the
+                third item's accordion body. Nothing more exciting happening
+                here in terms of content, but just filling up the space to make
+                it look, at least at first glance, a bit more representative of
+                how this would look in a real-world application.
+              </div>
+            </div>
+          </div>
+          <!-- kết thúc một item 4-->
+
+          <!-- Item 5 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-five"
+              >
+                Do you help me find a job?
+              </button>
+            </h2>
+            <div
+              id="question-five"
+              class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample"
+            >
+              <div class="accordion-body">
+                Placeholder content for this accordion, which is intended to
+                demonstrate the <code>.accordion-flush</code> class. This is the
+                third item's accordion body. Nothing more exciting happening
+                here in terms of content, but just filling up the space to make
+                it look, at least at first glance, a bit more representative of
+                how this would look in a real-world application.
+              </div>
+            </div>
+          </div>
+          <!-- kết thúc một item 5-->
+        </div>
+      </div>
+    </section>
+
+    <!-- kết thúc Question Accordion -->
+
+    <!-- Instructors -->
+    <section id="instructors" class="p-5 bg-primary">
+      <div class="container">
+        <h2 class="text-center text-white">Our Instructors</h2>
+        <p class="lead text-center text-white mb-5">
+          Our instructors all have 5+ years working as a specialist in their
+          industry
+        </p>
+        <div class="row g-4">
+          <!-- col-md-6 cho 6 cột, col-lg-3 cho 4 cột -->
+          <!-- cột 1 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="img/Nguyen-Bui.jpg"
+                  class="rounded-circle mb-3 w-50"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">Bùi Trung Nguyên</h3>
+                <p class="card-text">
+                  Kiểm nghiệm viên hóa lý. Người đọc sách không chuyên. Đang
+                  trên con đường trở thành một Fullstack developer.
+                </p>
+                <a href="https://twitter.com/Saturnzen2811/"
+                  ><i class="bi bi-twitter text-dark mx-1"></i
+                ></a>
+                <a href="https://www.facebook.com/Saturnzen2811/"
+                  ><i class="bi bi-facebook text-dark mx-1"></i
+                ></a>
+                <a href="https://www.linkedin.com/in/nguyên-bùi-27b0b9145/"
+                  ><i class="bi bi-linkedin text-dark mx-1"></i
+                ></a>
+                <a href="https://www.instagram.com/zensaturn/"
+                  ><i class="bi bi-instagram text-dark mx-1"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <!-- hết cột 1 -->
+          <!-- cột 2 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/women/11.jpg"
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">John Doe</h3>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Cumque, blanditiis dolore? Nostrum, ratione, pariatur adipisci
+                  debitis consectetur numquam accusamus ducimus nesciunt facere
+                  asperiores, ad sequi et id! Nesciunt, quaerat quisquam!
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- hết cột 2 -->
+          <!-- cột 3t -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/men/12.jpg"
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">Steve Smith</h3>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Cumque, blanditiis dolore? Nostrum, ratione, pariatur adipisci
+                  debitis consectetur numquam accusamus ducimus nesciunt facere
+                  asperiores, ad sequi et id! Nesciunt, quaerat quisquam!
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- hết cột 3 -->
+          <!-- cột thứ 4 -->
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light">
+              <div class="card-body text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/women/11.jpg"
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">Sara Smith</h3>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Cumque, blanditiis dolore? Nostrum, ratione, pariatur adipisci
+                  debitis consectetur numquam accusamus ducimus nesciunt facere
+                  asperiores, ad sequi et id! Nesciunt, quaerat quisquam!
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+          <!-- hết cột 4 -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact and map -->
+    <section class="p-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md">
+            <h2 class="text-center mb-4">Contact Info</h2>
+            <ul class="list-group list-group-flush lead">
+              <li class="list-group-item">
+                <span class="fw-bold">Main location: </span>50 Main st Boston NA
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Enrollment Phone: </span>50 Main st Boston
+                NA
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Student phone: </span>50 Main st Boston NA
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Student Email: </span>50 Main st Boston NA
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kết thúc contact và map -->
+
+    <!-- Footer -->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+      <div class="container">
+        <p class="lead">Copyright &copy;2021 Frontend Bootcamp</p>
+        <a href="#" class="position-absolute bottom-0 end-0 p-5">
+          <i class="bi bi-arrow-up-circle h1"></i>
+        </a>
+      </div>
+    </footer>
+    <!-- modal -->
+    <div
+      class="modal fade"
+      id="enroll"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="enroll">Modal title</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">Fill out this form and we will get back to you</p>
+            <form action="">
+              <div class="mb-3">
+                <label for="first-name" class="col-form-label">
+                  First Name:
+                </label>
+                <input type="text" class="form-control" id="first-name" />
+              </div>
+              <div class="mb-3">
+                <label for="last-name" class="col-form-label">
+                  Last Name:
+                </label>
+                <input type="text" class="form-control" id="last-name" />
+              </div>
+              <div class="mb-3">
+                <label for="Phone-number" class="col-form-label">
+                  Phone number:
+                </label>
+                <input type="text" class="form-control" id="Phone-number" />
+              </div>
+              <div class="mb-3">
+                <label for="Email" class="col-form-label"> Email: </label>
+                <input type="text" class="form-control" id="Email" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      mapboxgl.accessToken =
+        "pk.eyJ1Ijoic2F0dXJuemVuMjgxMSIsImEiOiJjbGw5MTlsbnYxZXkwM2VvMTM3aWdxcTMxIn0.3GT63SnGMRjqXT3l3x-hfw";
+      var map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/streets-v11",
+        center: [-71.060982, 42.35725],
+        zoom: 18,
+      });
+    </script>
+  </body>
+</html>
