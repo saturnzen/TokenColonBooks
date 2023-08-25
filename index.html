@@ -52,7 +52,7 @@
           <!-- ms-auto dùng đẩy menu sang bên phải -->
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a href="#learn" class="nav-link">What You'll learn</a>
+              <a href="#WhatYouWillLearn" class="nav-link">What You'll learn</a>
             </li>
             <li class="nav-item">
               <a href="#read" class="nav-link">LambdaInformationColonData</a>
@@ -143,7 +143,7 @@
     <!-- kết thúc phần newsletter -->
 
     <!-- Bắt đầu phần boxes -->
-    <section class="p-5">
+    <section class="p-5" id="WhatYouWillLearn">
       <div class="container">
         <!-- g-4 để tạo khoảng cách giữa các cột hoặc hàng -->
         <div class="row text-center g-4">
@@ -204,7 +204,14 @@
                   <i class="bi bi-person-square"></i>
                 </div>
                 <h3 class="card-title mb-3">Hybrid</h3>
-                <p class="card-text"></p>
+                <p class="card-text"><figure><blockquote class="blockquote">
+                  <p>
+                    "Ta đã tiến đến bước ngoặt mà ta không thể nào chỉ tiếp tục chạy đúng phần đường của mình. 
+                  Để có dù chỉ một chút cơ may thành công, trước áp lực mỗi ngày phải chuyển biến, đổi mới,tái tạo, ta buộc lòng phải trui ra khỏi hầm trú ẩn và tìm đến những người phù hợp mà hình thành đội nhóm.</p> </blockquote>
+                    <figcaption class="blockquote-footer text-warning">
+                    KEITH FERRAZI  <cite title="Source Title">Leading without authority</cite> (lãnh đạo không dùng quyền lực) NHÀ XUẤT BẢN TRẺ</figcaption>
+              
+                </figure></p>
                 <a href="#" class="btn btn-primary">Read more</a>
               </div>
             </div>
@@ -298,6 +305,7 @@
     <section id="questions" class="p-5">
       <div class="container">
         <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+        
 
         <div class="accordion accordion-flush" id="questions">
           <!-- Item 1 -->
@@ -310,6 +318,8 @@
                 data-bs-target="#question-one"
               >
                 Where exactly are you located?
+                <span class="fw-lighter  "> (chính xác thì những thứ này để làm gì?)</span>
+                
               </button>
             </h2>
             <div
@@ -318,9 +328,8 @@
               data-bs-parent="questions"
             >
               <div class="accordion-body">
-                Placeholder content for this accordion, which is intended to
-                demonstrate the <code>.accordion-flush</code> class. This is the
-                first item's accordion body.
+                Hy vọng một số kiến thức sẽ là hành trang cho bạn.
+                hy vọng rằng một số sẽ không bao giờ cần dùng đến.
               </div>
             </div>
           </div>
@@ -333,7 +342,9 @@
                 data-bs-toggle="collapse"
                 data-bs-target="#question-two"
               >
-                How much does it cost to attend?
+                
+              How much does it cost to attend?
+              <span class="fw-lighter  "> (Like hay follow thì có được gì không?)</span>
               </button>
             </h2>
             <div
@@ -342,9 +353,12 @@
               data-bs-parent="questions"
             >
               <div class="accordion-body">
-                Placeholder content for this accordion, which is intended to
-                demonstrate the <code>.accordion-flush</code> class. This is the
-                first item's accordion body.
+                Free. 
+                Toàn bộ dự án #VST sau gọi vốn trên một số nền tảng 
+                và trang web, 
+                nay đã hoàn toàn miễn phí ngay trên fanpage. 
+                Bạn có thể inbox fanpage để khiến nó chỉ
+                 thuộc về mình bạn (hoặc khiến nó biến mất mãi mãi)
               </div>
             </div>
           </div>
@@ -357,7 +371,9 @@
                 data-bs-toggle="collapse"
                 data-bs-target="#question-three"
               >
-                What do I need to know?
+              <span class="fw-lighter  ">Làm cái này để làm gì? Có ai đọc không? Có ra tiền không?</span>
+              
+                
               </button>
             </h2>
             <div
@@ -366,12 +382,12 @@
               data-bs-parent="#accordionFlushExample"
             >
               <div class="accordion-body">
-                Placeholder content for this accordion, which is intended to
-                demonstrate the <code>.accordion-flush</code> class. This is the
-                third item's accordion body. Nothing more exciting happening
-                here in terms of content, but just filling up the space to make
-                it look, at least at first glance, a bit more representative of
-                how this would look in a real-world application.
+                Một sự thỏa mãn cá nhân. 
+                Như tiêu chí học đi đôi với hành.
+                Như mô tả <a href="#WhatYouWillLearn">ở trên,</a> bạn có thể 
+                viết chẳng vì cái gì cả. Chỉ đơn giản là thôi thúc muốn viết.
+                Và luyện tập thì quan trọng.
+                
               </div>
             </div>
           </div>
@@ -384,7 +400,9 @@
                 data-bs-toggle="collapse"
                 data-bs-target="#question-four"
               >
-                How do I sign up?
+              <span class="fw-lighter  ">
+                Tại sao tôi nên like hay follow fanpage này?</span>
+              
               </button>
             </h2>
             <div
@@ -393,12 +411,9 @@
               data-bs-parent="#accordionFlushExample"
             >
               <div class="accordion-body">
-                Placeholder content for this accordion, which is intended to
-                demonstrate the <code>.accordion-flush</code> class. This is the
-                third item's accordion body. Nothing more exciting happening
-                here in terms of content, but just filling up the space to make
-                it look, at least at first glance, a bit more representative of
-                how this would look in a real-world application.
+                Như đã nói, với cách trình bày này (kém xa nhiều trang chia sẻ kiến thức 
+                và sách khác), nếu là tôi thì cũng còn lâu tôi mới quan tâm. Bạn có thể nhìn vào số like và follow, 
+                cũng như việc các quản trị viên không còn muốn chạy quảng cáo, để thấy rằng nếu bạn thấy thứ này có ích, thì rất ít người biết về chúng ngoài bạn.
               </div>
             </div>
           </div>
@@ -414,6 +429,9 @@
                 data-bs-target="#question-five"
               >
                 Do you help me find a job?
+                <span class="fw-lighter  ">
+                    (Đọc sách nhiều có giàu không? Biết mấy cái này có giàu không?)</span>
+                
               </button>
             </h2>
             <div
@@ -422,12 +440,12 @@
               data-bs-parent="#accordionFlushExample"
             >
               <div class="accordion-body">
-                Placeholder content for this accordion, which is intended to
-                demonstrate the <code>.accordion-flush</code> class. This is the
-                third item's accordion body. Nothing more exciting happening
-                here in terms of content, but just filling up the space to make
-                it look, at least at first glance, a bit more representative of
-                how this would look in a real-world application.
+                Như đã đề cập, bạn không biêt cũng được. Chẳng có cộng đồng
+                để bạn thảo luận về bài đăng mới nhất (ví dụ như bạn sẽ tìm ở đâu 
+                người để thảo luận về cuốn sách mới nhất của Michael Sandel đã được
+                mua và dịch bởi Omega+). Nếu bạn thấy được trang này thông qua đề xuất 
+                của facebook hoặc khi tìm kiếm trên google, rất có thể quản trị viên đã đủ giàu để 
+                chạy quảng cáo
               </div>
             </div>
           </div>
@@ -459,8 +477,14 @@
                 />
                 <h3 class="card-title mb-3">Bùi Trung Nguyên</h3>
                 <p class="card-text">
-                  Kiểm nghiệm viên hóa lý. Người đọc sách không chuyên. Đang
-                  trên con đường trở thành một Fullstack developer.
+                  <ul class="list-group list-group-flush head">
+                    <li class="list-group-item">Dược sĩ</li>
+                    <li class="list-group-item">Kiểm nghiệm viên hóa lý</li>
+                    <li class="list-group-item">Người đọc sách không chuyên</li>
+                    <li class="list-group-item">Đang
+                      trên con đường trở thành một Fullstack developer</li>
+                  </ul>
+                   
                 </p>
                 <a href="https://twitter.com/Saturnzen2811/"
                   ><i class="bi bi-twitter text-dark mx-1"></i
@@ -562,17 +586,16 @@
             <h2 class="text-center mb-4">Contact Info</h2>
             <ul class="list-group list-group-flush lead">
               <li class="list-group-item">
-                <span class="fw-bold">Main location: </span>50 Main st Boston NA
+                <span class="fw-bold">Main location: </span>
               </li>
               <li class="list-group-item">
-                <span class="fw-bold">Enrollment Phone: </span>50 Main st Boston
-                NA
+                <span class="fw-bold">Enrollment Phone: </span>
               </li>
               <li class="list-group-item">
-                <span class="fw-bold">Student phone: </span>50 Main st Boston NA
+                <span class="fw-bold">Student phone: </span>
               </li>
               <li class="list-group-item">
-                <span class="fw-bold">Student Email: </span>50 Main st Boston NA
+                <span class="fw-bold">Student Email: </span>nguyenbtfx22015@funix.edu.vn
               </li>
             </ul>
           </div>
