@@ -12,6 +12,6 @@ https://www.nirandfar.com/subscribe/
 Seemingly I missed something when I missed work this week. 
 # Nir and Far
 
-#Tech and Society
+# Tech and Society
 
 # Mind and Behavior
